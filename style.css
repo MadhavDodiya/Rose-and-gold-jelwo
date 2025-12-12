@@ -2,3 +2,26 @@
     margin: 0px;
     padding: 0px;
 }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.txt1{
+    text-decoration: none;
+}
+
+.bgimg1 {
+    background-image: url('/image/imgi_46_jewelry-3-breadcrumb.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media (min-width: 1024px) {
+  .dropdown:hover .dropdown-menu {
+    display: block !important;
+  }
+}
