@@ -13,12 +13,77 @@ body {
     text-decoration: none;
 }
 
+/* background image */
 .bgimg1 {
     background-image: url('/image/imgi_46_jewelry-3-breadcrumb.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
+
+.bgimg2 {
+    background-image: url('/image/imgi_47_jewelry-4-slider-1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+    padding: 0;
+}
+
+/* swiper */
+.swiper {
+      width: 100%;
+      height: auto;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .swiper {
+    width: 100%;
+    height: 500px;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 25px;
+}
+
+
+/* button */
+.btn1{
+    background-color: #bfa18f;
+    color: white;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 50px;
+    font-size: 20px;
+    margin: 20px 0px 0px 0px;
+    cursor: pointer;
+  }
+
+  .btn1:hover{
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+  }
 
 @media (min-width: 1024px) {
   .dropdown:hover .dropdown-menu {

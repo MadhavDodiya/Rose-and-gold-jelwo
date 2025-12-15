@@ -10,3 +10,13 @@
         menu.classList.toggle("hidden");
     });
 });
+
+// swiper js
+new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    speed: 800
+});
