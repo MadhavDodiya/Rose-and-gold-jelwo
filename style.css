@@ -1,10 +1,10 @@
 * {
     margin: 0px;
     padding: 0px;
+    font-family: "Playfair Display", serif;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
     overflow-x: hidden;
 }
@@ -28,8 +28,59 @@ body {
     background-repeat: no-repeat;
     height: 500px;
     padding: 0;
+  }
+  
+  .bgimg2 {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+  }
+  
+  .bgimg3{
+      background-image: url('/image/imgi_54_jewelry-4-banner-1.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 450px;
+      color: white;
+      text-align: center;
+  }
+  
+  .bgimg4{
+      background-image: url('/image/imgi_55_jewelry-4-banner-2.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 450px;
+      color: white;
+      text-align: center;
+  }
+
+.bgimg5{
+    background-image: url('/image/imgi_58_jewelry-4-cate-3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
 }
 
+.bgimg6{
+    background-image: url('/image/imgi_59_jewelry-4-cate-4.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+}
+
+.bgimg7{
+    background-image: url('/image/imgi_60_jewelry-4-cate-5.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+}
 /* swiper */
 .swiper {
       width: 100%;
@@ -49,11 +100,11 @@ body {
       height: auto;
       object-fit: cover;
     }
-
-    .swiper {
+.swiper {
     width: 100%;
     height: 500px;
 }
+
 
 .swiper-slide {
     display: flex;
