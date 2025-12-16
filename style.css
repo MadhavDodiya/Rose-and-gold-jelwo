@@ -65,6 +65,11 @@ body {
     background-repeat: no-repeat;
     height: 500px;
 }
+.bgimg1, .bgimg2, .bgimg3, .bgimg4, .bgimg5, .bgimg6, .bgimg7, .bgimg8, .bgimg9:hover {
+    transition: 0.5s;
+    background-color: white;
+    cursor: pointer;
+}
 
 .bgimg6{
     background-image: url('/image/imgi_59_jewelry-4-cate-4.png');
@@ -80,6 +85,63 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     height: 500px;
+}
+
+.bgimg8{
+    background-image: url('/image/imgi_56_jewelry-4-cate-1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+}
+
+.bgimg9{
+    background-image: url('/image/imgi_57_jewelry-4-cate-2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+}
+
+/* New jewelrys images */
+.bgimg10{
+    background-image: url('/image/imgi_1_jewelry-product-6.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+}
+
+.bgimg11{
+    background-image: url('/image/imgi_2_jewelry-product-7.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+}
+
+.bgimg12{
+    background-image: url('/image/imgi_3_jewelry-product-26.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+}
+
+.bgimg13{
+    background-image: url('/image/imgi_4_jewelry-product-27.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+}
+
+.bgimg14{
+    background-image: url('/image/imgi_61_jewelry-4-banner-3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
 }
 /* swiper */
 .swiper {
