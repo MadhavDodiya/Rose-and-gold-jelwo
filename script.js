@@ -42,4 +42,39 @@ new Swiper(".autoSwiper", {
     }
 });
 
+new Swiper(".productSwiper", {
+    loop: true,
+    spaceBetween: 20,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      0: { slidesPerView: 1 },
+      640: { slidesPerView: 2 },
+      1024: { slidesPerView: 4 },
+    },
+  });
+
+//   top button
+  const backToTop = document.getElementById("backToTop");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      backToTop.classList.remove("hidden");
+      backToTop.classList.add("flex");
+    } else {
+      backToTop.classList.add("hidden");
+      backToTop.classList.remove("flex");
+    }
+  });
+
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+
+
 
