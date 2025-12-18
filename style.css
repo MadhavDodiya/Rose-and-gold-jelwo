@@ -38,6 +38,23 @@ body {
       justify-content: center;
       flex-direction: column;
   }
+
+  .bgimg22 {
+    background-image: url('/image/imgi_50_jewelry-4-slider-2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+    padding: 0;
+  }
+  
+  .bgimg22 {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+  }
   
   .bgimg3{
       background-image: url('/image/imgi_54_jewelry-4-banner-1.png');

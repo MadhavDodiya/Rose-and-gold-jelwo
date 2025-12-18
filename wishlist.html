@@ -3,20 +3,24 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Jelwo wishlist Page</title>
+        <title>Jelwo Wishlist Page</title>
         <link rel="stylesheet" href="style.css">
         <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdn.tailwindcss.com"></script>
         <style></style>
     </head>
     <body>
-<!-- TOP NAVIGATION -->
+        <!-- TOP NAVIGATION -->
         <nav class="w-full bg-white shadow-sm">
 
             <!-- TOP BAR -->
@@ -51,6 +55,7 @@
                     </span>
                 </div>
 
+
                 <!-- MOBILE MENU TOGGLE -->
                 <button id="navToggle"
                     class="lg:hidden ml-4 text-gray-700 text-2xl">
@@ -58,398 +63,240 @@
                 </button>
             </div>
         </nav>
-        <hr class="m-0 p-0 border-gray-300">
+        <hr class="border-gray-200">
         <!-- BOTTOM NAVIGATION -->
         <nav class="w-full bg-white shadow-sm">
-            <div
-                class="container mx-auto flex items-center justify-between py-3">
-                <!-- LEFT EMPTY SPACE (keeps center perfectly centered) -->
-                <div class="w-1/3"></div>
-                <!-- CENTER NAVIGATION -->
-                <ul
-                    class="w-1/3 flex justify-center items-center gap-8 font-medium text-sm">
-                    <li><a href="index.html" class="hover:text-gray-500 txt1">HOME</a></li>
-                    <li class="relative group cursor-pointer">
-                        <span
-                            class="hover:text-gray-500 flex items-center gap-1">
-                            SHOP <span>▾</span>
-                        </span>
+                <div class="container flex justify-center py-3">
+                    <!-- CENTER NAVIGATION -->
+                    <ul class="flex gap-8 font-medium text-sm">
+                        <li><a href="index.html" class="hover:text-gray-500">HOME</a></li>
+                        <li class="relative group cursor-pointer">
+                            <span class="hover:text-gray-500 flex items-center gap-1">
+                                SHOP </span>
+                        </li>
 
-                        <!-- Mega Menu -->
-                        <div class="absolute left-1/2 -translate-x-1/2 hidden group-hover:flex bg-white shadow-lg p-6 mt-2 w-[900px] z-50">
-                            <div class="grid grid-cols-5 gap-6 w-full">
-                                <!-- Earrings -->
-                                <div>
-                                    <h6 class="font-semibold mb-2">Earrings</h6>
-                                    <ul class="space-y-1 text-sm">
-                                        <li><a href="#" class="hover:text-gray-500">Blue heavy t-shirt</a></li>
-                                        <li><a href="#" class="hover:text-gray-500">Brown sunglasses</a></li>
-                                        <li><a href="#" class="hover:text-gray-500">Bucket shoes</a></li>
-                                        <li><a href="#" class="hover:text-gray-500">Lamond rashmi ring</a></li>
-                                        <li><a href="#" class="hover:text-gray-500">Floral gold bangle</a></li>
-                                        <li><a href="#" class="hover:text-gray-500">Glitter diamond ring</a></li>
-                                    </ul>
-                                </div>
-                                <!-- Necklace -->
-                                <div>
-                                    <h6 class="font-semibold mb-2">Necklace</h6>
-                                    <ul class="space-y-1 text-sm">
-                                        <li><a href="#" class="hover:text-gray-500">Rose gold rings</a></li>
-                                        <li><a href="#" class="hover:text-gray-500">Brown sunglasses</a></li>
-                                        <li><a href="#" class="hover:text-gray-500">Bucket shoes</a></li>
-                                        <li><a href="#" class="hover:text-gray-500">Color print sandal</a></li>
-                                        <li><a href="#" class="hover:text-gray-500">Floral gold bangle</a></li>
-                                        <li><a href="#" class="hover:text-gray-500">Simple Pearl earrings</a></li>
-                                    </ul>
-                                </div>
-                                <!-- Rings -->
-                                <div>
-                                    <h6 class="font-semibold mb-2">Rings</h6>
-                                    <ul class="space-y-1 text-sm">
-                                        <li><a href="#" class="hover:text-gray-500">Blue heavy t-shirt</a></li>
-                                        <li><a href="#" class="hover:text-gray-500">Brown sunglasses</a></li>
-                                        <li><a href="#" class="hover:text-gray-500">Dark sunglasses</a></li>
-                                        <li><a href="#" class="hover:text-gray-500">Half sleeved tshirt</a></li>
-                                        <li><a href="#" class="hover:text-gray-500">Formal shirt</a></li>
-                                        <li><a href="#" class="hover:text-gray-500">Gold nose pin</a></li>
-                                    </ul>
-                                </div>
-                                <!-- Bracelets -->
-                                <div>
-                                    <h6 class="font-semibold mb-2">Bracelets</h6>
-                                    <ul class="space-y-1 text-sm">
-                                        <li><a href="#" class="hover:text-gray-500">Blue heavy t-shirt</a></li>
-                                        <li><a href="#" class="hover:text-gray-500">Brown sunglasses</a></li>
-                                        <li><a href="#" class="hover:text-gray-500">Formal shoes</a></li>
-                                        <li><a href="#" class="hover:text-gray-500">Formal shirt</a></li>
-                                        <li><a href="#" class="hover:text-gray-500">Blue heavy t-shirt</a></li>
-                                        <li><a href="#" class="hover:text-gray-500">Brown sunglasses</a></li>
-                                    </ul>
-                                </div>
-                                <!-- Promo Image -->
-                                <div class="flex items-center justify-center">
-                                    <img src="https://via.placeholder.com/120x180.png?text=FLAT+30%25+OFF" alt="Promo" class="rounded">
+                        <!-- PRODUCT DROPDOWN -->
+                        <li class="relative group cursor-pointer">
+                            <span class="hover:text-gray-500 flex items-center gap-1">
+                                PRODUCT
+                            </span>
+                        </li>
+
+                        <li class="relative group cursor-pointer">
+                            <span class="hover:text-gray-500 flex items-center gap-1"><a href="blog.html">BLOG</a></span>
+                        </li>
+
+                        <li class="relative group cursor-pointer">
+                            <span class="hover:text-gray-500 flex items-center gap-1">PAGES
+                                <span>▾</span></span>
+                            <div
+                                class="absolute left-1/2 -translate-x-1/2 hidden group-hover:flex bg-white shadow-lg p-6 mt-2 w-[200px] z-50">
+                                <div class="grid grid-cols-1 gap-6 w-full">
+                                    <!-- Earrings -->
+                                    <div>
+                                        <ul class="">
+                                            <li><a href="#" class="hover:text-gray-500">About Us</a></li>
+                                            <li><a href="#" class="hover:text-gray-500">Contact</a></li>
+                                            <li><a href="#" class="hover:text-gray-500">Faq's</a></li>
+                                            <li><a href="#" class="hover:text-gray-500">Privacy policy</a></li>
+                                            <li><a href="#" class="hover:text-gray-500">Refund policy</a></li>
+                                            <li><a href="#" class="hover:text-gray-500">Store Location</a></li>
+                                            <li><a href="#" class="hover:text-gray-500">Shipping Return</a></li>
+                                            <li><a href="#" class="hover:text-gray-500">Term & Condition</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </li>
-
-                    <!-- PRODUCT DROPDOWN -->
-                    <li class="relative group cursor-pointer">
-                        <span class="hover:text-gray-500 flex items-center gap-1">
-                            PRODUCT <span>▾</span>
-                        </span>
-                        <!-- Mega Menu -->
-                        <div
-                            class="absolute left-1/2 -translate-x-1/2 hidden group-hover:flex bg-white shadow-lg p-6 mt-2 w-[900px] z-50">
-                            <div class="grid grid-cols-5 gap-6 w-full">
-                                <!-- Earrings -->
-                                <div>
-                                    <h6 class="font-semibold mb-2">Earrings</h6>
-                                    <ul class="space-y-1 text-sm">
-                                        <li><a href="#" class="hover:text-gray-500">Blue heavy t-shirt</a></li>
-                                        <li><a href="#" class="hover:text-gray-500">Brown sunglasses</a></li>
-                                        <li><a href="#" class="hover:text-gray-500">Bucket shoes</a></li>
-                                        <li><a href="#" class="hover:text-gray-500">Lamond rashmi ring</a></li>
-                                        <li><a href="#" class="hover:text-gray-500">Floral gold bangle</a></li>
-                                        <li><a href="#" class="hover:text-gray-500">Glitter diamond ring</a></li>
-                                    </ul>
-                                </div>
-                                <!-- Necklace -->
-                                <div>
-                                    <h6 class="font-semibold mb-2">Necklace</h6>
-                                    <ul class="space-y-1 text-sm">
-                                        <li><a href="#" class="hover:text-gray-500">Rose gold rings</a></li>
-                                        <li><a href="#" class="hover:text-gray-500">Brown sunglasses</a></li>
-                                        <li><a href="#" class="hover:text-gray-500">Bucket shoes</a></li>
-                                        <li><a href="#" class="hover:text-gray-500">Color print sandal</a></li>
-                                        <li><a href="#" class="hover:text-gray-500">Floral gold bangle</a></li>
-                                        <li><a href="#" class="hover:text-gray-500">Simple Pearl earrings</a></li>
-                                    </ul>
-                                </div>
-                                <!-- Rings -->
-                                <div>
-                                    <h6 class="font-semibold mb-2">Rings</h6>
-                                    <ul class="space-y-1 text-sm">
-                                        <li><a href="#" class="hover:text-gray-500">Blue heavy t-shirt</a></li>
-                                        <li><a href="#" class="hover:text-gray-500">Brown sunglasses</a></li>
-                                        <li><a href="#" class="hover:text-gray-500">Dark sunglasses</a></li>
-                                        <li><a href="#" class="hover:text-gray-500">Half sleeved tshirt</a></li>
-                                        <li><a href="#" class="hover:text-gray-500">Formal shirt</a></li>
-                                        <li><a href="#" class="hover:text-gray-500">Gold nose pin</a></li>
-                                    </ul>
-                                </div>
-                                <!-- Bracelets -->
-                                <div>
-                                    <h6 class="font-semibold mb-2">Bracelets</h6>
-                                    <ul class="space-y-1 text-sm">
-                                        <li><a href="#" class="hover:text-gray-500">Blue heavy t-shirt</a></li>
-                                        <li><a href="#" class="hover:text-gray-500">Brown sunglasses</a></li>
-                                        <li><a href="#" class="hover:text-gray-500">Formal shoes</a></li>
-                                        <li><a href="#" class="hover:text-gray-500">Formal shirt</a></li>
-                                        <li><a href="#" class="hover:text-gray-500">Blue heavy t-shirt</a></li>
-                                        <li><a href="#" class="hover:text-gray-500">Brown sunglasses</a></li>
-                                    </ul>
-                                </div>
-                                <!-- Promo Image -->
-                                <div class="flex items-center justify-center">
-                                    <img src="https://via.placeholder.com/120x180.png?text=FLAT+30%25+OFF" alt="Promo" class="rounded">
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="relative group cursor-pointer">
-                        <span
-                            class="hover:text-gray-500 flex items-center gap-1">
-                            BLOG <span>▾</span>
-                        </span>
-
-                        <!-- Mega Menu -->
-                        <div
-                            class="absolute left-1/2 -translate-x-1/2 hidden group-hover:flex bg-white shadow-lg p-6 mt-2 w-[900px] z-50">
-                            <div class="grid grid-cols-5 gap-6 w-full">
-                                <!-- Earrings -->
-                                <div>
-                                    <h6 class="font-semibold mb-2">Earrings</h6>
-                                    <ul class="space-y-1 text-sm">
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Blue
-                                                heavy t-shirt</a></li>
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Brown
-                                                sunglasses</a></li>
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Bucket
-                                                shoes</a></li>
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Lamond
-                                                rashmi ring</a></li>
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Floral
-                                                gold bangle</a></li>
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Glitter
-                                                diamond ring</a></li>
-                                    </ul>
-                                </div>
-                                <!-- Necklace -->
-                                <div>
-                                    <h6 class="font-semibold mb-2">Necklace</h6>
-                                    <ul class="space-y-1 text-sm">
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Rose
-                                                gold rings</a></li>
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Brown
-                                                sunglasses</a></li>
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Bucket
-                                                shoes</a></li>
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Color
-                                                print sandal</a></li>
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Floral
-                                                gold bangle</a></li>
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Simple
-                                                Pearl earrings</a></li>
-                                    </ul>
-                                </div>
-                                <!-- Rings -->
-                                <div>
-                                    <h6 class="font-semibold mb-2">Rings</h6>
-                                    <ul class="space-y-1 text-sm">
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Blue
-                                                heavy t-shirt</a></li>
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Brown
-                                                sunglasses</a></li>
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Dark
-                                                sunglasses</a></li>
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Half
-                                                sleeved tshirt</a></li>
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Formal
-                                                shirt</a></li>
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Gold
-                                                nose pin</a></li>
-                                    </ul>
-                                </div>
-                                <!-- Bracelets -->
-                                <div>
-                                    <h6
-                                        class="font-semibold mb-2">Bracelets</h6>
-                                    <ul class="space-y-1 text-sm">
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Blue
-                                                heavy t-shirt</a></li>
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Brown
-                                                sunglasses</a></li>
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Formal
-                                                shoes</a></li>
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Formal
-                                                shirt</a></li>
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Blue
-                                                heavy t-shirt</a></li>
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Brown
-                                                sunglasses</a></li>
-                                    </ul>
-                                </div>
-                                <!-- Promo Image -->
-                                <div class="flex items-center justify-center">
-                                    <img
-                                        src="https://via.placeholder.com/120x180.png?text=FLAT+30%25+OFF"
-                                        alt="Promo" class="rounded">
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="relative group cursor-pointer">
-                        <span
-                            class="hover:text-gray-500 flex items-center gap-1">
-                            PAGES <span>▾</span>
-                        </span>
-
-                        <!-- Mega Menu -->
-                        <div
-                            class="absolute left-1/2 -translate-x-1/2 hidden group-hover:flex bg-white shadow-lg p-6 mt-2 w-[900px] z-50">
-                            <div class="grid grid-cols-5 gap-6 w-full">
-                                <!-- Earrings -->
-                                <div>
-                                    <h6 class="font-semibold mb-2">Earrings</h6>
-                                    <ul class="space-y-1 text-sm">
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Blue
-                                                heavy t-shirt</a></li>
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Brown
-                                                sunglasses</a></li>
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Bucket
-                                                shoes</a></li>
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Lamond
-                                                rashmi ring</a></li>
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Floral
-                                                gold bangle</a></li>
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Glitter
-                                                diamond ring</a></li>
-                                    </ul>
-                                </div>
-                                <!-- Necklace -->
-                                <div>
-                                    <h6 class="font-semibold mb-2">Necklace</h6>
-                                    <ul class="space-y-1 text-sm">
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Rose
-                                                gold rings</a></li>
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Brown
-                                                sunglasses</a></li>
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Bucket
-                                                shoes</a></li>
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Color
-                                                print sandal</a></li>
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Floral
-                                                gold bangle</a></li>
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Simple
-                                                Pearl earrings</a></li>
-                                    </ul>
-                                </div>
-                                <!-- Rings -->
-                                <div>
-                                    <h6 class="font-semibold mb-2">Rings</h6>
-                                    <ul class="space-y-1 text-sm">
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Blue
-                                                heavy t-shirt</a></li>
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Brown
-                                                sunglasses</a></li>
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Dark
-                                                sunglasses</a></li>
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Half
-                                                sleeved tshirt</a></li>
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Formal
-                                                shirt</a></li>
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Gold
-                                                nose pin</a></li>
-                                    </ul>
-                                </div>
-                                <!-- Bracelets -->
-                                <div>
-                                    <h6
-                                        class="font-semibold mb-2">Bracelets</h6>
-                                    <ul class="space-y-1 text-sm">
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Blue
-                                                heavy t-shirt</a></li>
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Brown
-                                                sunglasses</a></li>
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Formal
-                                                shoes</a></li>
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Formal
-                                                shirt</a></li>
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Blue
-                                                heavy t-shirt</a></li>
-                                        <li><a href="#"
-                                                class="hover:text-gray-500">Brown
-                                                sunglasses</a></li>
-                                    </ul>
-                                </div>
-                                <!-- Promo Image -->
-                                <div class="flex items-center justify-center">
-                                    <img
-                                        src="https://via.placeholder.com/120x180.png?text=FLAT+30%25+OFF"
-                                        alt="Promo" class="rounded">
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                </ul>
-
-                <!-- RIGHT SIDE -->
-                <div
-                    class="w-1/3 flex justify-end items-center gap-2 font-semibold">
-                    <i class="bi bi-house-door"></i> FREE TRY AT HOME
+                        </li>
+                    </ul>
                 </div>
+            </nav>
+
+        <div class="container-fluid mb-5 bgimg1">
+            <div class="container pt-5 pb-5">
+                <center>
+                    <p style="font-size: 20px;font-weight: 500;color: white;">HOME - WISHLIST</p>
+                    <p style="font-size: 50px;font-weight: 650;color: white;">WISHLIST</p>
+                </center>
             </div>
-        </nav>
+        </div>
+
+        <div class="container mt-5 mb-5">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <center>
+                        <p style="font-size: 20px;font-weight: 500;">Your wishlist is Empty <a href="index.html" class="text-[#a87f68] underline">return to store </a></p>
+                    </center>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
 
 
-        <script src="script.js"></script>
-        <!-- Bootstrap JS -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Swiper JS -->
-        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-        <!-- Bootstrap Icons -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- footer section -->
+    <footer class="bg-[#fdf7f2] text-gray-600">
+    <div class="max-w-7xl mx-auto px-4 py-14">
+        <!-- Top Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
+        <!-- Brand -->
+        <div>
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+            <img src="/image/imgi_25_jewelry-4-logo.png" alt="">
+            </h2>
+            <ul class="space-y-3 text-sm">
+            <li class="flex gap-3">
+                <i class="fa-solid fa-location-dot text-[#b08968] mt-1"></i>
+                55 East 10th street, new york, ny 10003, united states
+            </li>
+            <li class="flex gap-3">
+                <i class="fa-solid fa-phone text-[#b08968]"></i>
+                +(220) 123 456 7890
+            </li>
+            <li class="flex gap-3">
+                <i class="fa-solid fa-envelope text-[#b08968]"></i>
+                demo123546@gmail.com
+            </li>
+            </ul>
+        </div>
+        <!-- Information -->
+        <div>
+            <h4 class="text-[#b08968] font-semibold mb-4">Information</h4>
+            <ul class="space-y-2 text-sm">
+            <li><a href="#" class="no-underline font-medium text-black-500">About us</a></li>
+            <li><a href="#" class="no-underline font-medium text-black-500">Contact us</a></li>
+            <li><a href="#" class="no-underline font-medium text-black-500">FAQs</a></li>
+            <li><a href="#" class="no-underline font-medium text-black-500">News</a></li>
+            </ul>
+        </div>
+        <!-- Privacy -->
+        <div>
+            <h4 class="text-[#b08968] font-semibold mb-4">Privacy & terms</h4>
+            <ul class="space-y-2 text-sm">
+            <li><a href="#" class="no-underline font-medium text-black-500">Privacy policy</a></li>
+            <li><a href="#" class="no-underline font-medium text-black-500">Refund policy</a></li>
+            <li><a href="#" class="no-underline font-medium text-black-500">Shipping & return</a></li>
+            <li><a href="#" class="no-underline font-medium text-black-500">Terms & condition</a></li>
+            </ul>
+        </div>
+        <!-- Category -->
+        <div>
+            <h4 class="text-[#b08968] font-semibold mb-4">Category</h4>
+            <ul class="space-y-2 text-sm">
+            <li><a href="#" class="no-underline font-medium text-black-500">Rings</a></li>
+            <li><a href="#" class="no-underline font-medium text-black-500">Earrings</a></li>
+            <li><a href="#" class="no-underline font-medium text-black-500">Nacklaces</a></li>
+            <li><a href="#" class="no-underline font-medium text-black-500">Bracelets</a></li>
+            <li><a href="#" class="no-underline font-medium text-black-500">Pandant</a></li>
+            </ul>
+        </div>
+        <!-- Visit Store -->
+        <div>
+            <h4 class="text-[#b08968] font-semibold mb-4">Visit store</h4>
+            <ul class="space-y-2 text-sm">
+            <li class="font-medium text-black-500">Mon - sat : 10am - 11pm</li>
+            <li class="font-medium text-black-500">Sun : 10am - 4pm</li>
+            <li class="font-medium text-black-500">7 Days a week</li>
+            </ul>
+        </div>
+        </div>
+
+        <!-- Bottom -->
+        <div class="mt-12 flex flex-col lg:flex-row items-center justify-between gap-8">
+        <!-- Social -->
+        <div class="flex gap-3">
+            <a class="w-10 h-10 border rounded-full flex items-center justify-center hover:bg-[#b08968] hover:text-white transition">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a class="w-10 h-10 border rounded-full flex items-center justify-center hover:bg-[#b08968] hover:text-white transition">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a class="w-10 h-10 border rounded-full flex items-center justify-center hover:bg-[#b08968] hover:text-white transition">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a class="w-10 h-10 border rounded-full flex items-center justify-center hover:bg-[#b08968] hover:text-white transition">
+                <i class="fa-brands fa-pinterest"></i>
+            </a>
+            <a class="w-10 h-10 border rounded-full flex items-center justify-center hover:bg-[#b08968] hover:text-white transition">
+                <i class="fa-brands fa-square-youtube"></i>
+            </a>    
+        </div>
+
+        <!-- Subscribe -->
+        <div class="flex flex-col sm:flex-row items-center gap-4 w-full lg:w-auto">
+            <p class="text-[#b08968] font-medium whitespace-nowrap">
+            Subscribe and get 15% discount.
+            </p>
+            <div class="flex w-full sm:w-auto">
+            <input type="email" placeholder="Enter your email" class="px-4 py-3 rounded-l-full border w-full sm:w-64 focus:outline-none" />
+            <button class="bg-[#b08968] text-white px-6 rounded-r-full">
+                SUBSCRIBE
+            </button>
+            </div>
+        </div>
+        </div>
+    </div><hr class="border-gray-500">
+    <div class="max-w-7xl mx-auto px-4 py-6 text-center text-sm text-gray-500">
+        &copy; 2024 Jewelry Store. All rights reserved.
+    </footer>
+    <!-- footer-end -->
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-6 right-6 hidden h-10 w-10 items-center justify-center border border-gray-400 bg-white text-gray-700 hover:bg-gray-100 transition rounded-sm shadow-sm z-50" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     </body>
 </html>
