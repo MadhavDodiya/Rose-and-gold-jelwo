@@ -76,5 +76,23 @@ new Swiper(".productSwiper", {
     });
   });
 
+  // sidebar
+  const openCart = document.getElementById('openCart');
+    const closeCart = document.getElementById('closeCart');
+    const cartSidebar = document.getElementById('cartSidebar');
+    const cartOverlay = document.getElementById('cartOverlay');
+
+    openCart.addEventListener('click', () => {
+        cartSidebar.classList.remove('translate-x-full');
+        cartOverlay.classList.remove('opacity-0', 'invisible');
+    });
+
+    closeCart.addEventListener('click', closeSidebar);
+    cartOverlay.addEventListener('click', closeSidebar);
+
+    function closeSidebar() {
+        cartSidebar.classList.add('translate-x-full');
+        cartOverlay.classList.add('opacity-0', 'invisible');
+    }
 
 

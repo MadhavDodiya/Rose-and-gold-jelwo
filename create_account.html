@@ -65,8 +65,8 @@
                         <a href="wishlist.html"><i
                                 class="bi bi-heart text-lg"></i> (0)</a>
                     </span>
-                    <span class="flex items-center gap-1">
-                        <a href="cart.html"><i class="bi bi-cart text-lg"></i>
+                    <span class="flex items-center gap-1" id="openCart">
+                        <a href="#"><i class="bi bi-cart text-lg"></i>
                             (0)</a>
                     </span>
                 </div>
@@ -126,6 +126,30 @@
                     </ul>
                 </div>
             </nav>
+
+            <!-- cart sidebar -->
+        <!-- Overlay -->
+        <div id="cartOverlay" class="fixed inset-0 bg-black/40 opacity-0 invisible transition-all duration-300 z-40"></div>
+
+        <!-- Cart Sidebar -->
+        <div id="cartSidebar" class="fixed top-0 right-0 h-full w-full sm:w-[420px] bg-white translate-x-full transition-transform duration-300 z-50 shadow-xl">
+
+            <!-- Header -->
+            <div class="flex justify-between items-center px-5 py-4 border-b">
+                <h2 class="text-lg font-semibold">My shopping cart</h2>
+                <button id="closeCart" class="text-2xl">&times;</button>
+            </div>
+
+            <!-- Empty Cart -->
+            <div class="flex flex-col items-center justify-center h-[80%] text-center px-6">
+                <i class="bi bi-bag text-4xl mb-4"></i>
+                <p class="text-lg font-medium mb-6">Your cart is empty</p>
+                <button class="bg-[#b38a6d] text-white px-8 py-3 rounded-full">
+                    CONTINUE SHOPPING
+                </button>
+            </div>
+        </div>
+        <!-- cart sidebar end -->
 
         <div class="container-fluid mb-5 bgimg1">
             <div class="container pt-5 pb-5">
