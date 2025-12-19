@@ -95,4 +95,34 @@ new Swiper(".productSwiper", {
         cartOverlay.classList.add('opacity-0', 'invisible');
     }
 
+// collection page js
+document.addEventListener("DOMContentLoaded", () => {
+
+  const products = document.querySelectorAll(".product");
+  const range = document.getElementById("priceRange");
+  const priceValue = document.getElementById("priceValue");
+
+  function filterByPrice() {
+    const maxPrice = Number(range.value);
+    priceValue.textContent = maxPrice;
+
+    products.forEach(product => {
+      const price = Number(product.dataset.price);
+
+      if (price <= maxPrice) {
+        product.classList.remove("hidden");
+      } else {
+        product.classList.add("hidden");
+      }
+    });
+  }
+
+  range.addEventListener("input", filterByPrice);
+
+  // Initial run
+  filterByPrice();
+});
+
+
+
 
