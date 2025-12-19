@@ -187,53 +187,44 @@
             <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
             <!-- SIDEBAR -->
             <aside class="lg:col-span-1 border rounded p-4 space-y-6">
-            <!-- Categories -->
-            <div>
-                <h3 class="font-semibold mb-3">Categories</h3>
-                <div class="space-y-2 text-sm">
-                <label class="flex items-center gap-2">
-                    <input type="checkbox" class="category" value="14K Bangles">
-                    14K Bangles
-                </label>
-                <label class="flex items-center gap-2">
-                    <input type="checkbox" class="category" value="18K Bracelets">
-                    18K Bracelets
-                </label>
-                <label class="flex items-center gap-2">
-                    <input type="checkbox" class="category" value="22K Bangles">
-                    22K Bangles
-                </label>
-                </div>
-            </div>
+            <h3 class="font-semibold mb-2">Categories</h3>
+            <label class="flex gap-2 mb-2">
+            <input type="checkbox" class="category-filter" value="14K"> 14K
+            </label>
+            <label class="flex gap-2 mb-2">
+            <input type="checkbox" class="category-filter" value="18K"> 18K
+            </label>
+            <label class="flex gap-2 mb-2">
+            <input type="checkbox" class="category-filter" value="Bangles"> Bangles
+            </label>
+            <label class="flex gap-2 mb-4">
+            <input type="checkbox" class="category-filter" value="Bracelets"> Bracelets
+            </label>
+
 
             <!-- Availability -->
-            <div>
-                <h3 class="font-semibold mb-3">Availability</h3>
-                <label class="flex items-center gap-2 text-sm">
-                <input type="checkbox"> In stock
-                </label>
-                <label class="flex items-center gap-2 text-sm">
-                <input type="checkbox"> Out of stock
-                </label>
-            </div>
+            <h3 class="font-semibold mb-2">Availability</h3>
+            <label class="flex gap-2 mb-2">
+            <input type="checkbox" class="stock-filter" value="in"> In stock
+            </label>
+            <label class="flex gap-2 mb-4">
+            <input type="checkbox" class="stock-filter" value="out"> Out of stock
+            </label>
+
+
 
             <!-- Price -->
-            <div>
-            <h3 class="font-semibold mb-3">Price</h3>
-
-            <input
-                type="range"
-                min="0"
-                max="28"
-                value="28"
-                id="priceRange"
-                class="w-full accent-[#b38a6d]"
-            >
-
-            <p class="text-sm mt-2">
-                Up to: ₹<span id="priceValue">28</span>
-            </p>
+            <div class="flex items-center justify-between mb-2">
+                <h3 class="font-semibold">Price</h3>
+                <button id="resetPrice" class="text-sm text-gray-400 hover:text-black">Reset</button>
             </div>
+
+                <input type="range" id="priceRange" min="0" max="28" value="28"
+                    class="w-full accent-[#b38a6d]">
+
+                <p class="text-sm mt-2">
+                Up to ₹<span id="priceValue">28</span>
+                </p>
 
 
             <!-- Color -->
@@ -298,7 +289,7 @@
                     <main class="lg:col-span-3 md: sm:">
                     <div id="products" class="grid grid-cols-2 sm:grid-cols-3 gap-6">
                         <!-- PRODUCT CARD -->
-                        <div class="product" data-category="14K Bangles" data-price="20">
+                        <div class="product" data-category="14K Bangles" data-price="20" data-stock="in">
                         <div class="border p-3">
                             <img src="/image/imgi_1_jewelry-product-6.png">
                             <hr class="my-2">
@@ -312,7 +303,7 @@
                         </div>
 
 
-                        <div class="product" data-category="14K Bangles" data-price="22">
+                        <div class="product" data-category="14K" data-price="22" data-stock="out">
                             <div class="border p-3">
                                 <img src="/image/imgi_2_jewelry-product-7.png">
                                 <hr class="my-2">
@@ -325,7 +316,7 @@
                             </div>
                         </div>
 
-                        <div class="product" data-category="14K Bangles" data-price="26">
+                        <div class="product" data-category="14K Bangles" data-price="26" data-stock="in">
                             <div class="border p-3">
                                 <img src="/image/imgi_3_jewelry-product-26.png">
                                 <hr class="my-2">
@@ -339,7 +330,7 @@
                         </div>
 
                         <!-- PRODUCT CARD -->
-                        <div class="product" data-category="14K Bangles" data-price="12">
+                        <div class="product" data-category="14K Bangles" data-price="12" data-stock="in">
                             <div class="border p-3">
                                 <img src="/image/imgi_4_jewelry-product-27.png">
                                 <hr class="my-2">
@@ -352,7 +343,7 @@
                             </div>
                         </div>
 
-                        <div class="product" data-category="14K Bangles" data-price="10">
+                        <div class="product" data-category="14K Bangles" data-price="10" data-stock="out">
                             <div class="border p-3">
                                 <img src="/image/imgi_5_jewelry-product-21.png">
                                 <hr class="my-2">
@@ -365,7 +356,7 @@
                             </div>
                         </div>
 
-                        <div class="product" data-category="14K Bangles" data-price="15">
+                        <div class="product" data-category="14K Bangles" data-price="15" data-stock="in">
                             <div class="border p-3">
                                 <img src="/image/imgi_6_jewelry-product-22.png">
                                 <hr class="my-2">
@@ -379,7 +370,7 @@
                         </div>
 
                         <!-- PRODUCT CARD -->
-                        <div class="product" data-category="14K Bangles" data-price="14">
+                        <div class="product" data-category="14K Bangles" data-price="14" data-stock="in">
                             <div class="border p-3">
                                 <img src="/image/imgi_7_jewelry-product-51.png">
                                 <hr class="my-2">
@@ -392,7 +383,7 @@
                             </div>
                         </div>
 
-                        <div class="product" data-category="14K Bangles" data-price="28">
+                        <div class="product" data-category="14K Bangles" data-price="28" value="Bangles" data-stock="in">
                             <div class="border p-3">
                                 <img src="/image/imgi_8_jewelry-product-52.png">
                                 <hr class="my-2">
@@ -405,7 +396,7 @@
                             </div>
                         </div>
 
-                        <div class="product" data-category="14K Bangles" data-price="28">
+                        <div class="product" data-category="14K Bangles" data-price="28" value="Bangles" data-stock="in">
                             <div class="border p-3">
                                 <img src="/image/imgi_9_jewelry-product-41.png">
                                 <hr class="my-2">
@@ -419,7 +410,7 @@
                         </div>
 
                         <!-- PRODUCT CARD -->
-                        <div class="product" data-category="14K Bangles" data-price="18">
+                        <div class="product" data-category="14K Bangles" data-price="18" data-stock="in">
                             <div class="border p-3">
                                 <img src="/image/imgi_10_jewelry-product-42.png">
                                 <hr class="my-2">
@@ -432,7 +423,7 @@
                             </div>
                         </div>
 
-                        <div class="product" data-category="14K Bangles" data-price="12">
+                        <div class="product" data-category="14K Bangles" data-price="12" data-stock="in">
                             <div class="border p-3">
                                 <img src="/image/imgi_11_jewelry-product-11.png">
                                 <hr class="my-2">
@@ -445,7 +436,7 @@
                             </div>
                         </div>
 
-                        <div class="product" data-category="14K Bangles" data-price="22">
+                        <div class="product" data-category="14K Bangles" data-price="22" data-stock="in">
                             <div class="border p-3">
                                 <img src="/image/imgi_11_jewelry-product-11.png">
                                 <hr class="my-2">
