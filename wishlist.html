@@ -15,7 +15,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gV[...]
         <script src="https://cdn.tailwindcss.com"></script>
         <style></style>
     </head>
@@ -48,10 +48,10 @@
                 <div class="flex items-center space-x-4 text-gray-700">
                     <a href="login.html"><i class="bi bi-person text-lg"></i></a>
                     <span class="flex items-center gap-1">
-                        <a href="wishlist.html"><i class="bi bi-heart text-lg"></i> (0)</a>
+                        <a href="wishlist.html"><i class="bi bi-heart text-lg"></i> (<span id="wishlistCount">0</span>)</a>
                     </span>
                     <span class="flex items-center gap-1" id="openCart">
-                        <a href="#"><i class="bi bi-cart text-lg"></i> (0)</a>
+                        <a href="#"><i class="bi bi-cart text-lg"></i> (<span id="cartCount">0</span>)</a>
                     </span>
                 </div>
 
@@ -125,13 +125,26 @@
                 <button id="closeCart" class="text-2xl">&times;</button>
             </div>
 
-            <!-- Empty Cart -->
-            <div class="flex flex-col items-center justify-center h-[80%] text-center px-6">
-                <i class="bi bi-bag text-4xl mb-4"></i>
-                <p class="text-lg font-medium mb-6">Your cart is empty</p>
-                <button class="bg-[#b38a6d] text-white px-8 py-3 rounded-full">
-                    <a href="collection.html">CONTINUE SHOPPING</a>
-                </button>
+            <div class="px-5 py-4">
+                <div id="cartItems" class="space-y-4">
+                    <!-- items injected by script -->
+                </div>
+
+                <div id="cartEmpty" class="flex flex-col items-center justify-center h-[60%] text-center px-6">
+                    <i class="bi bi-bag text-4xl mb-4"></i>
+                    <p class="text-lg font-medium mb-6">Your cart is empty</p>
+                    <button class="bg-[#b38a6d] text-white px-8 py-3 rounded-full">
+                        <a href="collection.html">CONTINUE SHOPPING</a>
+                    </button>
+                </div>
+            </div>
+
+            <div id="cartFooter" class="border-t px-5 py-4 hidden">
+                <div class="flex justify-between items-center mb-3">
+                    <span class="font-medium">Subtotal</span>
+                    <span id="cartSubtotal" class="font-semibold">₹0</span>
+                </div>
+                <button id="checkoutBtn" class="w-full mt-2 bg-[#b38a6d] text-white py-2 rounded-full">Checkout</button>
             </div>
         </div>
         <!-- cart sidebar end -->
@@ -150,49 +163,18 @@
                 <div class="col-md-2"></div>
                 <div class="col-md-8">
                     <center>
-                        <p style="font-size: 20px;font-weight: 500;">Your wishlist is Empty <a href="index.html" class="text-[#a87f68] underline">return to store </a></p>
+                        <div id="wishlistEmpty" >
+                            <p style="font-size: 20px;font-weight: 500;">Your wishlist is Empty <a href="index.html" class="text-[#a87f68] underline">return to store </a></p>
+                        </div>
+
+                        <div id="wishlist" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+                            <!-- wishlist items will be rendered here -->
+                        </div>
                     </center>
                 </div>
                 <div class="col-md-2"></div>
             </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <!-- footer section -->
     <footer class="bg-[#fdf7f2] text-gray-600">
@@ -302,7 +284,7 @@
     <!-- footer-end -->
 
     <!-- Back to Top Button -->
-    <button id="backToTop" class="fixed bottom-6 right-6 hidden h-10 w-10 items-center justify-center border border-gray-400 bg-white text-gray-700 hover:bg-gray-100 transition rounded-sm shadow-sm z-50" aria-label="Back to top">
+    <button id="backToTop" class="fixed bottom-6 right-6 hidden h-10 w-10 items-center justify-center border border-gray-400 bg-white text-gray-700 hover:bg-gray-100 transition rounded-sm shadow-sm z-[...]
         <i class="fa-solid fa-arrow-up"></i>
     </button>
     
