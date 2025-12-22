@@ -15,36 +15,28 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gV[...]
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gV[...]" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdn.tailwindcss.com"></script>
         <style></style>
     </head>
     <body>
         <!-- TOP NAVIGATION -->
         <nav class="w-full bg-white shadow-sm">
-
-            <!-- TOP BAR -->
-            <div
-                class="container mx-auto flex items-center justify-between py-3 px-4">
-
-                <!-- LEFT: LOGO + TEXT -->
+            <div class="container mx-auto flex items-center justify-between py-3 px-4">
                 <div class="flex items-center gap-4">
                     <img src="/image/imgi_233_jewelry-4-logo.png" class="h-5" />
-
                     <span class="text-gray-500 text-sm hidden lg:block">
                         Free UK standard delivery on all orders.
                     </span>
                 </div>
 
-                <!-- SEARCH BAR -->
                 <div class="hidden lg:flex flex-grow mx-6 relative">
                     <input type="text" placeholder="Search product..."
                         class="w-full border border-gray-300 pl-5 pr-12 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-gray-300" />
-                    <i
-                        class="bi bi-search absolute right-5 top-1/2 -translate-y-1/2 text-gray-500"></i>
+                    <i class="bi bi-search absolute right-5 top-1/2 -translate-y-1/2 text-gray-500"></i>
                 </div>
 
-                <!-- RIGHT ICONS -->
+                <!-- RIGHT ICONS: updated to include dynamic counts -->
                 <div class="flex items-center space-x-4 text-gray-700">
                     <a href="login.html"><i class="bi bi-person text-lg"></i></a>
                     <span class="flex items-center gap-1">
@@ -55,80 +47,21 @@
                     </span>
                 </div>
 
-
-                <!-- MOBILE MENU TOGGLE -->
-                <button id="navToggle"
-                    class="lg:hidden ml-4 text-gray-700 text-2xl">
-                    ☰
-                </button>
+                <button id="navToggle" class="lg:hidden ml-4 text-gray-700 text-2xl">☰</button>
             </div>
         </nav>
         <hr class="border-gray-200">
-        <!-- BOTTOM NAVIGATION -->
-        <nav class="w-full bg-white shadow-sm">
-                <div class="container flex justify-center py-3">
-                    <!-- CENTER NAVIGATION -->
-                    <ul class="flex gap-8 font-medium text-sm">
-                        <li><a href="index.html" class="hover:text-gray-500">HOME</a></li>
-                        <li class="relative group cursor-pointer">
-                            <span class="hover:text-gray-500 flex items-center gap-1">
-                                SHOP </span>
-                        </li>
 
-                        <!-- PRODUCT DROPDOWN -->
-                        <li class="relative group cursor-pointer">
-                            <span class="hover:text-gray-500 flex items-center gap-1">
-                                PRODUCT
-                            </span>
-                        </li>
-
-                        <li class="relative group cursor-pointer">
-                            <span class="hover:text-gray-500 flex items-center gap-1"><a href="blog.html">BLOG</a></span>
-                        </li>
-
-                        <li class="relative group cursor-pointer">
-                            <span class="hover:text-gray-500 flex items-center gap-1">PAGES
-                                <span>▾</span></span>
-                            <div
-                                class="absolute left-1/2 -translate-x-1/2 hidden group-hover:flex bg-white shadow-lg p-6 mt-2 w-[200px] z-50">
-                                <div class="grid grid-cols-1 gap-6 w-full">
-                                    <!-- Earrings -->
-                                    <div>
-                                        <ul class="">
-                                            <li><a href="#" class="hover:text-gray-500">About Us</a></li>
-                                            <li><a href="#" class="hover:text-gray-500">Contact</a></li>
-                                            <li><a href="#" class="hover:text-gray-500">Faq's</a></li>
-                                            <li><a href="#" class="hover:text-gray-500">Privacy policy</a></li>
-                                            <li><a href="#" class="hover:text-gray-500">Refund policy</a></li>
-                                            <li><a href="#" class="hover:text-gray-500">Store Location</a></li>
-                                            <li><a href="#" class="hover:text-gray-500">Shipping Return</a></li>
-                                            <li><a href="#" class="hover:text-gray-500">Term & Condition</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-
-            <!-- cart sidebar -->
-        <!-- Overlay -->
+        <!-- cart sidebar (unchanged structure; script will populate) -->
         <div id="cartOverlay" class="fixed inset-0 bg-black/40 opacity-0 invisible transition-all duration-300 z-40"></div>
-
-        <!-- Cart Sidebar -->
         <div id="cartSidebar" class="fixed top-0 right-0 h-full w-full sm:w-[420px] bg-white translate-x-full transition-transform duration-300 z-50 shadow-xl">
-
-            <!-- Header -->
             <div class="flex justify-between items-center px-5 py-4 border-b">
                 <h2 class="text-lg font-semibold">My shopping cart</h2>
                 <button id="closeCart" class="text-2xl">&times;</button>
             </div>
 
             <div class="px-5 py-4">
-                <div id="cartItems" class="space-y-4">
-                    <!-- items injected by script -->
-                </div>
+                <div id="cartItems" class="space-y-4"></div>
 
                 <div id="cartEmpty" class="flex flex-col items-center justify-center h-[60%] text-center px-6">
                     <i class="bi bi-bag text-4xl mb-4"></i>
@@ -147,7 +80,6 @@
                 <button id="checkoutBtn" class="w-full mt-2 bg-[#b38a6d] text-white py-2 rounded-full">Checkout</button>
             </div>
         </div>
-        <!-- cart sidebar end -->
 
         <div class="container-fluid mb-5 bgimg1">
             <div class="container pt-5 pb-5">
@@ -163,12 +95,14 @@
                 <div class="col-md-2"></div>
                 <div class="col-md-8">
                     <center>
-                        <div id="wishlistEmpty" >
+                        <!-- shown when wishlist is empty -->
+                        <div id="wishlistEmpty">
                             <p style="font-size: 20px;font-weight: 500;">Your wishlist is Empty <a href="index.html" class="text-[#a87f68] underline">return to store </a></p>
                         </div>
 
-                        <div id="wishlist" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-                            <!-- wishlist items will be rendered here -->
+                        <!-- wishlist grid: items will be rendered here with same card design -->
+                        <div id="wishlist" class="grid grid-cols-2 sm:grid-cols-3 gap-6 mt-6 w-full">
+                            <!-- wishlist cards injected by script.js -->
                         </div>
                     </center>
                 </div>
@@ -176,131 +110,162 @@
             </div>
         </div>
 
-    <!-- footer section -->
-    <footer class="bg-[#fdf7f2] text-gray-600">
-    <div class="max-w-7xl mx-auto px-4 py-14">
-        <!-- Top Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
-        <!-- Brand -->
-        <div>
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">
-            <img src="/image/imgi_25_jewelry-4-logo.png" alt="">
-            </h2>
-            <ul class="space-y-3 text-sm">
-            <li class="flex gap-3">
-                <i class="fa-solid fa-location-dot text-[#b08968] mt-1"></i>
-                55 East 10th street, new york, ny 10003, united states
-            </li>
-            <li class="flex gap-3">
-                <i class="fa-solid fa-phone text-[#b08968]"></i>
-                +(220) 123 456 7890
-            </li>
-            <li class="flex gap-3">
-                <i class="fa-solid fa-envelope text-[#b08968]"></i>
-                demo123546@gmail.com
-            </li>
-            </ul>
-        </div>
-        <!-- Information -->
-        <div>
-            <h4 class="text-[#b08968] font-semibold mb-4">Information</h4>
-            <ul class="space-y-2 text-sm">
-            <li><a href="#" class="no-underline font-medium text-black-500">About us</a></li>
-            <li><a href="#" class="no-underline font-medium text-black-500">Contact us</a></li>
-            <li><a href="#" class="no-underline font-medium text-black-500">FAQs</a></li>
-            <li><a href="#" class="no-underline font-medium text-black-500">News</a></li>
-            </ul>
-        </div>
-        <!-- Privacy -->
-        <div>
-            <h4 class="text-[#b08968] font-semibold mb-4">Privacy & terms</h4>
-            <ul class="space-y-2 text-sm">
-            <li><a href="#" class="no-underline font-medium text-black-500">Privacy policy</a></li>
-            <li><a href="#" class="no-underline font-medium text-black-500">Refund policy</a></li>
-            <li><a href="#" class="no-underline font-medium text-black-500">Shipping & return</a></li>
-            <li><a href="#" class="no-underline font-medium text-black-500">Terms & condition</a></li>
-            </ul>
-        </div>
-        <!-- Category -->
-        <div>
-            <h4 class="text-[#b08968] font-semibold mb-4">Category</h4>
-            <ul class="space-y-2 text-sm">
-            <li><a href="#" class="no-underline font-medium text-black-500">Rings</a></li>
-            <li><a href="#" class="no-underline font-medium text-black-500">Earrings</a></li>
-            <li><a href="#" class="no-underline font-medium text-black-500">Nacklaces</a></li>
-            <li><a href="#" class="no-underline font-medium text-black-500">Bracelets</a></li>
-            <li><a href="#" class="no-underline font-medium text-black-500">Pandant</a></li>
-            </ul>
-        </div>
-        <!-- Visit Store -->
-        <div>
-            <h4 class="text-[#b08968] font-semibold mb-4">Visit store</h4>
-            <ul class="space-y-2 text-sm">
-            <li class="font-medium text-black-500">Mon - sat : 10am - 11pm</li>
-            <li class="font-medium text-black-500">Sun : 10am - 4pm</li>
-            <li class="font-medium text-black-500">7 Days a week</li>
-            </ul>
-        </div>
-        </div>
+    <!-- footer and scripts unchanged below... -->
+        <!-- footer section -->
+        <footer class="bg-[#fdf7f2] text-gray-600">
+            <div class="max-w-7xl mx-auto px-4 py-14">
+                <!-- Top Grid -->
+                <div
+                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
+                    <!-- Brand -->
+                    <div>
+                        <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+                            <img src="/image/imgi_25_jewelry-4-logo.png" alt>
+                        </h2>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex gap-3">
+                                <i
+                                    class="fa-solid fa-location-dot text-[#b08968] mt-1"></i>
+                                55 East 10th street, new york, ny 10003, united
+                                states
+                            </li>
+                            <li class="flex gap-3">
+                                <i class="fa-solid fa-phone text-[#b08968]"></i>
+                                +(220) 123 456 7890
+                            </li>
+                            <li class="flex gap-3">
+                                <i
+                                    class="fa-solid fa-envelope text-[#b08968]"></i>
+                                demo123546@gmail.com
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Information -->
+                    <div>
+                        <h4
+                            class="text-[#b08968] font-semibold mb-4">Information</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#"
+                                    class="no-underline font-medium text-black-500">About
+                                    us</a></li>
+                            <li><a href="#"
+                                    class="no-underline font-medium text-black-500">Contact
+                                    us</a></li>
+                            <li><a href="#"
+                                    class="no-underline font-medium text-black-500">FAQs</a></li>
+                            <li><a href="#"
+                                    class="no-underline font-medium text-black-500">News</a></li>
+                        </ul>
+                    </div>
+                    <!-- Privacy -->
+                    <div>
+                        <h4 class="text-[#b08968] font-semibold mb-4">Privacy &
+                            terms</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#"
+                                    class="no-underline font-medium text-black-500">Privacy
+                                    policy</a></li>
+                            <li><a href="#"
+                                    class="no-underline font-medium text-black-500">Refund
+                                    policy</a></li>
+                            <li><a href="#"
+                                    class="no-underline font-medium text-black-500">Shipping
+                                    & return</a></li>
+                            <li><a href="#"
+                                    class="no-underline font-medium text-black-500">Terms
+                                    & condition</a></li>
+                        </ul>
+                    </div>
+                    <!-- Category -->
+                    <div>
+                        <h4
+                            class="text-[#b08968] font-semibold mb-4">Category</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#"
+                                    class="no-underline font-medium text-black-500">Rings</a></li>
+                            <li><a href="#"
+                                    class="no-underline font-medium text-black-500">Earrings</a></li>
+                            <li><a href="#"
+                                    class="no-underline font-medium text-black-500">Nacklaces</a></li>
+                            <li><a href="#"
+                                    class="no-underline font-medium text-black-500">Bracelets</a></li>
+                            <li><a href="#"
+                                    class="no-underline font-medium text-black-500">Pandant</a></li>
+                        </ul>
+                    </div>
+                    <!-- Visit Store -->
+                    <div>
+                        <h4 class="text-[#b08968] font-semibold mb-4">Visit
+                            store</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li class="font-medium text-black-500">Mon - sat :
+                                10am - 11pm</li>
+                            <li class="font-medium text-black-500">Sun : 10am -
+                                4pm</li>
+                            <li class="font-medium text-black-500">7 Days a
+                                week</li>
+                        </ul>
+                    </div>
+                </div>
 
-        <!-- Bottom -->
-        <div class="mt-12 flex flex-col lg:flex-row items-center justify-between gap-8">
-        <!-- Social -->
-        <div class="flex gap-3">
-            <a class="w-10 h-10 border rounded-full flex items-center justify-center hover:bg-[#b08968] hover:text-white transition">
-                <i class="fa-brands fa-facebook-f"></i>
-            </a>
-            <a class="w-10 h-10 border rounded-full flex items-center justify-center hover:bg-[#b08968] hover:text-white transition">
-                <i class="fa-brands fa-x-twitter"></i>
-            </a>
-            <a class="w-10 h-10 border rounded-full flex items-center justify-center hover:bg-[#b08968] hover:text-white transition">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a class="w-10 h-10 border rounded-full flex items-center justify-center hover:bg-[#b08968] hover:text-white transition">
-                <i class="fa-brands fa-pinterest"></i>
-            </a>
-            <a class="w-10 h-10 border rounded-full flex items-center justify-center hover:bg-[#b08968] hover:text-white transition">
-                <i class="fa-brands fa-square-youtube"></i>
-            </a>    
-        </div>
+                <!-- Bottom -->
+                <div
+                    class="mt-12 flex flex-col lg:flex-row items-center justify-between gap-8">
+                    <!-- Social -->
+                    <div class="flex gap-3">
+                        <a
+                            class="w-10 h-10 border rounded-full flex items-center justify-center hover:bg-[#b08968] hover:text-white transition">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a
+                            class="w-10 h-10 border rounded-full flex items-center justify-center hover:bg-[#b08968] hover:text-white transition">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a
+                            class="w-10 h-10 border rounded-full flex items-center justify-center hover:bg-[#b08968] hover:text-white transition">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a
+                            class="w-10 h-10 border rounded-full flex items-center justify-center hover:bg-[#b08968] hover:text-white transition">
+                            <i class="fa-brands fa-pinterest"></i>
+                        </a>
+                        <a
+                            class="w-10 h-10 border rounded-full flex items-center justify-center hover:bg-[#b08968] hover:text-white transition">
+                            <i class="fa-brands fa-square-youtube"></i>
+                        </a>
+                    </div>
 
-        <!-- Subscribe -->
-        <div class="flex flex-col sm:flex-row items-center gap-4 w-full lg:w-auto">
-            <p class="text-[#b08968] font-medium whitespace-nowrap">
-            Subscribe and get 15% discount.
-            </p>
-            <div class="flex w-full sm:w-auto">
-            <input type="email" placeholder="Enter your email" class="px-4 py-3 rounded-l-full border w-full sm:w-64 focus:outline-none" />
-            <button class="bg-[#b08968] text-white px-6 rounded-r-full">
-                SUBSCRIBE
-            </button>
-            </div>
-        </div>
-        </div>
-    </div><hr class="border-gray-500">
-    <div class="max-w-7xl mx-auto px-4 py-6 text-center text-sm text-gray-500">
-        &copy; 2024 Jewelry Store. All rights reserved.
-    </footer>
-    <!-- footer-end -->
+                    <!-- Subscribe -->
+                    <div
+                        class="flex flex-col sm:flex-row items-center gap-4 w-full lg:w-auto">
+                        <p class="text-[#b08968] font-medium whitespace-nowrap">
+                            Subscribe and get 15% discount.
+                        </p>
+                        <div class="flex w-full sm:w-auto">
+                            <input type="email" placeholder="Enter your email"
+                                class="px-4 py-3 rounded-l-full border w-full sm:w-64 focus:outline-none" />
+                            <button
+                                class="bg-[#b08968] text-white px-6 rounded-r-full">
+                                SUBSCRIBE
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div><hr class="border-gray-500">
+            <div
+                class="max-w-7xl mx-auto px-4 py-6 text-center text-sm text-gray-500">
+                &copy; 2024 Jewelry Store. All rights reserved.
+            </footer>
+            <!-- footer-end -->
 
     <!-- Back to Top Button -->
-    <button id="backToTop" class="fixed bottom-6 right-6 hidden h-10 w-10 items-center justify-center border border-gray-400 bg-white text-gray-700 hover:bg-gray-100 transition rounded-sm shadow-sm z-[...]
+    <button id="backToTop" class="fixed bottom-6 right-6 hidden h-10 w-10 items-center justify-center border border-gray-400 bg-white text-gray-700 hover:bg-gray-100 transition rounded-sm shadow-sm z-50" aria-label="Back to top">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
-    
 
-    <!-- Tailwind CSS -->
+    <!-- scripts -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     </body>
 </html>
